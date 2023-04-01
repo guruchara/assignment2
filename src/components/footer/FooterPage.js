@@ -1,10 +1,14 @@
 import styles from './footer.module.css'
 import facebookIcon from '../../assets/facebookIcon.png'
+import instagramIcon from '../../assets/instagram.png'
+import twitterIcon from '../../assets/twitterIcon.png'
+import whatsappIcon from '../../assets/whatsapp.png'
+
 import shortid from 'shortid'
 
 const FooterPage = () => {
 
-    let socialMedia = [facebookIcon, facebookIcon, facebookIcon, facebookIcon]
+    let socialMedia = [facebookIcon, instagramIcon, twitterIcon, whatsappIcon]
 
     let aboutArr = ['History',
         'Our Team',
@@ -36,7 +40,7 @@ const FooterPage = () => {
                 <div className={styles.mediaContainer}>
 
                     {socialMedia.map((item, index) => (
-                        <img className={styles.icon} ke={shortid.generate()} src={item}></img>
+                        <img className={styles.icon} key={shortid.generate()} src={item}></img>
                     ))}
                 </div>
             </div>
